@@ -1,18 +1,19 @@
-# .packit.yaml
-specfile_path: python.spec
-jobs:
-  - job: copr_build
-    trigger: pull_request
-    targets:
-      - fedora-all
+packages:
 
-  - job: tests
-    trigger: pull_request
-    targets:
-      - fedora-all
-    skip_build: true
-    manual_trigger: true
-    identifier: python-tests
-    labels:
-      - regression
-    
+  python-copr:
+    downstream_package_name: python-copr
+    upstream_package_name: copr
+    paths: 
+      - ./python
+    specfile_path: python-copr.spec
+    files_to_sync: 
+      - python-copr.spec
+
+  copr-cli:
+    downstream_package_name: copr-cli
+    upstream_package_name: copr-cli
+    paths: 
+      - ./cli
+    specfile_path: copr-cli.spec
+    files_to_sync: 
+      - copr-cli.spec
