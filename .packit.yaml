@@ -1,5 +1,5 @@
 # .packit.yaml
-
+specfile_path: python.spec
 jobs:
   - job: copr_build
     trigger: pull_request
@@ -15,4 +15,4 @@ jobs:
     identifier: python-tests
     labels:
       - regression
-    specfile_path: python.spec
+    
