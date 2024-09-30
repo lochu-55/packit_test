@@ -1,10 +1,17 @@
-jobs:
-- job: copr_build
-  trigger: pull_request
-  targets:
-  - fedora-all
+# .packit.yaml
 
-- job: tests
-  trigger: pull_request
-  targets:
-  - fedora-all
+jobs:
+  - job: copr_build
+    trigger: pull_request
+    targets:
+      - fedora-all
+
+  - job: tests
+    trigger: pull_request
+    targets:
+      - fedora-all
+    skip_build: true
+    manual_trigger: true
+    identifier: python-tests
+    labels:
+      - regression
