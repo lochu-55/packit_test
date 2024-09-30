@@ -28,5 +28,5 @@ nosetests tests/
 %{python3_sitelib}/example_package*
 
 %changelog
-Thu Sep 30 2024 Your Lochu <lochu5vilehya@gmail.com> - 0.1-1
-Initial package with tests
+*Thu Sep 30 2024 Lochu <lochu5vilehya@gmail.com> - 0.1-1
+-Initial package with tests
