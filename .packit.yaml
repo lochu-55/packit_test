@@ -1,4 +1,4 @@
-version: 2022-01-24
+version: "1"
 jobs:
   - job: propose_downstream
     triggers:
