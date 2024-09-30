@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 packages:
 
   python-copr:
@@ -17,3 +18,14 @@ packages:
     specfile_path: copr-cli.spec
     files_to_sync: 
       - copr-cli.spec
+=======
+version: 2022-01-24
+jobs:
+  - job: propose_downstream
+    triggers:
+      - release
+  - job: pull_from_upstream
+    triggers:
+      - pull-request
+
+>>>>>>> initial
