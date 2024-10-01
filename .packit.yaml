@@ -7,3 +7,7 @@ jobs:
     trigger: pull_request
     targets:
       -fedora-rawhide
+  - repo: https://github.com/packit/pre-commit-hooks
+    rev: v1.2.0
+    hooks:
+      - id: validate-config
