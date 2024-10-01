@@ -1,0 +1,22 @@
+# Minimal Packit configuration for a project
+specfile_path: my-package.spec
+upstream_project_url: "https://github.com/yourusername/my-python-package"
+downstream_package_name: "my-python-package"
+create_pr: true
+
+jobs:
+  - job: propose_downstream
+    trigger: release
+    branch: fedora-all  # Change to 'branch'
+  - job: copr_build
+    trigger: pull_request
+    targets:
+      - fedora-38-x86_64
+      - fedora-39-x86_64
+
+sync_changelog: true
+release_suffix: "dev.{PACKIT_PROJECT_BRANCH}"
+
+
+
+
