@@ -1,8 +1,9 @@
-version: "1"
 jobs:
-  - job: propose_downstream
-    triggers:
-      - release
-  - job: pull_from_upstream
-    triggers:
-      - pull-request
+  - job: copr_build
+    trigger: pull_request
+    targets:
+      - fedora-rawhide
+  - job: tests
+    trigger: pull_request
+    targets:
+      -fedora-rawhide
